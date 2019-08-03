@@ -8,7 +8,7 @@ The app from this project allows the user the teleoperate the machine.  In other
 
 Origins of CNC webserver
 
-This is actually version 2 of this project.  The first version used a server written C# and required a lot of code.  Also, I did not use the raspberry pi for the video.  I realized that to implement the project, it was going to take some time. I was trying to figure out a better way to implement the web app.  I got the idea for version 2 while attending the AEC Hackathon in Seattle and VR Hackathon in Seattle 2019.  Most importantly the Principal Researcher at ThinkPredict helped a lot.  He did not say how to actually do the project, but he pointed out the direction to look.
+This is actually version 2 of this project.  The first version used a server written C# and required a lot of code.  Also, I did not use the raspberry pi for the video.  I realized that to implement the project, it was going to take some time. I was trying to figure out a better way to implement the web app.  I got the idea for version 2 while attending the AEC Hackathon in Seattle and VR Hackathon in Seattle 2019.  Most importantly the Principal Researcher at ThinkPredict helped a lot.  He did not say how to actually do the project, but he pointed the direction to look.
 
 Technology used in this Project
 
