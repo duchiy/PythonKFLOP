@@ -1,0 +1,77 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<img src="http://<Your IP>:8081" /> <!--Enter the IP Address of your Raspberry Pi-->
+<div style="float:right">
+</div>
+
+<div style=" height:400px; width:400px; float:right; margin-right:100">
+<center>
+<h1><span style="color:#5C5C5C;">Technology Arts and Crafts</span><span style="color:#139442"> Demo</span></h1>
+<h2>CNC Machine Web Server</h2><br>
+<center>
+<a href="#" id="turnon" style="font-size:30px;text-decoration:none;" > <button type="button">Turn On Machine</button><br></a><br><br></center><br><br>
+<a href="#" id="up" style="font-size:30px;text-decoration:none;">  &#x25B2;&#x25B2;<br>Forward</a><br><br></center>
+<a href="#" id="left" style="font-size:30px;text-decoration:none;"> &nbsp;&nbsp;&nbsp;&nbsp;&#x25C0;&#x25C0;Left</a>&nbsp;&nbsp;&nbsp
+<a href="#" id="right" style="font-size:30px; text-decoration:none;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Right &#x25B6;&#x25B6;</a><br><br>
+<center><a href="#" id="down" style="font-size:30px;text-decoration:none;"> Backward<br> &#x25BC;&#x25BC;</a></center>
+</div>
+<div id="log"></div>
+<script>
+var timeout;
+$( document ).ready(function(){
+    $("#turnon").on("mousedown", function(event) {
+        timeout = setInterval(() => {
+            $.get('/turnon_machine');
+        }, 500);
+        return false;
+        }).on('mouseup', function() {
+            clearInterval(timeout);
+        $.get('/stop');
+    });
+
+    $("#down").on("mousedown", function() {
+        timeout = setInterval(() => {
+            $.get('/down_side');
+        }, 100);
+        return false;
+        }).on('mouseup', function() {
+            clearInterval(timeout);
+        $.get('/stop');
+    });
+    $("#up").on("mousedown", function() {
+        timeout = setInterval(() => {
+            $.get('/up_side');
+        }, 100);
+        return false;
+        }).on('mouseup', function() {
+            clearInterval(timeout);
+        $.get('/stop');
+    });
+    $
+    ("#left").on("mousedown", function() {
+        timeout = setInterval(() => {
+        $.get('/left_side');
+        }, 100);
+        return false;
+        }).on('mouseup', function() {
+            clearInterval(timeout);
+        $.get('/stop');
+    });
+    $("#right").on("mousedown", function() {
+        timeout = setInterval(() => {
+        $.get('/right_side');
+        }, 100);
+        }).on('mouseup', function() {
+            clearInterval(timeout);
+        $.get('/stop');   
+    });
+ 
+});
+
+</script>
+
+</body>
+</html>
