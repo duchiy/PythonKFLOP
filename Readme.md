@@ -21,3 +21,6 @@ The back-end (server) was developed using Python Flask.  The server runs on the 
 The Webcam server runs on the Raspbian Linux installed on the Raspberry Pi3.  The server uses the Motion Project to control the video feeds.  You can find it here;
 
 https://github.com/Motion-Project/motion
+
+IMPORTANT NOTE
+This software is as-is.  Do not use the software for mission critical applications such as but not limited life support, avionics, and space exploration.
